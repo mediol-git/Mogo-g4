@@ -90,6 +90,10 @@ header {
 }
 
 /* services */
+.service-list {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
 .services {
     list-style: none;
     display: flex;
@@ -115,6 +119,10 @@ header {
 }
 
 /* team */
+.team {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
 .team hr {
     margin-bottom: 45px;
 }
@@ -131,4 +139,21 @@ header {
 }
 .team-item img {
     width: 100%;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid #b6b6b6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+input[type=email] {
+    padding: 11px 10px;
+    border: 1px solid #B6B6B6;
+}
+input[type=email]:focus {
+    outline: none;
+    border: 1px solid #B6B6B6;
 }
