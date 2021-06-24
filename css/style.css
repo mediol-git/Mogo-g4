@@ -32,6 +32,9 @@ p {
     color: #b6b6b6;
     line-height: 22px;
 }
+img {
+    display: block;
+}
 
 /* header */
 header {
@@ -127,6 +130,8 @@ header {
     margin-bottom: 45px;
 }
 .team-list {
+    padding-top: 30px;
+    text-align: center;
     list-style: none;
     display: flex;
 }
@@ -137,8 +142,72 @@ header {
 .team-item:last-child {
     margin-right: 0;
 }
+.item-photo {
+    position: relative;
+}
+.item-photo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -10px;
+    background: linear-gradient(180deg, rgba(239, 139, 138, 0.8) 0%, rgba(229, 207, 130, 0.8) 100%);
+    opacity: 0;
+    transition: .3s;
+}
+.item-photo:hover::before,
+.item-photo:hover .social {
+    opacity: 1;
+}
 .team-item img {
     width: 100%;
+}
+.social {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    transform: translate(-50%);
+    transition: .3s;
+    opacity: 0;
+}
+.social li {
+    height: 57px;
+    width: 57px;
+    background: #FCE38A;
+    margin-left: 1px;
+    transition: background .3s;
+}
+.social li:hover {
+    background: #95E1D3;
+}
+.social a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.social img {
+    height: 26px;
+}
+.team-item h3 {
+    margin-top: 30px;
+    margin-bottom: 11px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+.team-item p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #B6B6B6;
 }
 
 /* footer */
@@ -147,7 +216,11 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+form {
+    display: flex;
 }
 input[type=email] {
     padding: 11px 10px;
@@ -156,4 +229,17 @@ input[type=email] {
 input[type=email]:focus {
     outline: none;
     border: 1px solid #B6B6B6;
+}
+input[type=email]::placeholder {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+    color: #b6b6b6;
+}
+input[type=submit] {
+    color: #fff;
+    background: #95E1D3;
+    padding: 11px 40px;
+    border: none;
+    text-transform: uppercase;
 }
