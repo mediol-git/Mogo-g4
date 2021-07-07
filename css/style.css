@@ -243,3 +243,49 @@ input[type=submit] {
     border: none;
     text-transform: uppercase;
 }
+
+/* responsive */
+@media (max-width: 1200px) {
+    header,
+    main,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .services li {
+        width: 50%;
+    }
+    .team-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .team-item {
+        width: 50%;
+        margin-right: 0;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    footer {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 425px) {
+    .service-list,
+    .team {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .services li {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .team-item {
+        width: 100%;
+    }
+}
